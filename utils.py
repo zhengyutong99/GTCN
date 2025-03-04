@@ -249,16 +249,16 @@ def get_features(args, type_mask):
     features_list = []
     in_dims = []
 
-    drug_features_df = pd.read_csv('./feature/Drug_feature.csv', sep='\t', header=None, index_col=None)
+    drug_features_df = pd.read_csv('./data/feature/Drug_feature.csv', sep='\t', header=None, index_col=None)
     drug_features = torch.FloatTensor(drug_features_df.values).to(args.gpu_id)
 
-    target_features_df = pd.read_csv('./feature/Target_feature.csv', sep='\t', header=None, index_col=None)
+    target_features_df = pd.read_csv('./data/feature/Target_feature.csv', sep='\t', header=None, index_col=None)
     target_features = torch.FloatTensor(target_features_df.values).to(args.gpu_id)
 
-    pathway_features_df = pd.read_csv('./feature/Pathway_feature.csv', sep='\t', header=None, index_col=None)
+    pathway_features_df = pd.read_csv('./data/feature/Pathway_feature.csv', sep='\t', header=None, index_col=None)
     pathway_features = torch.FloatTensor(pathway_features_df.values).to(args.gpu_id)
     
-    cellline_features_df = pd.read_csv('./feature/Disease_feature.csv', sep='\t', header=None, index_col=None)
+    cellline_features_df = pd.read_csv('./data/feature/Disease_feature.csv', sep='\t', header=None, index_col=None)
     cellline_features = torch.FloatTensor(cellline_features_df.values).to(args.gpu_id)
     
     # 0 = drug, 1 = target, 2 = pathway, 3 = cellline
