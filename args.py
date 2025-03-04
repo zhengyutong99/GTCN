@@ -16,7 +16,7 @@ parser.add_argument('-ND', '--node_dim', type=int, default=64, help='hidden dime
 parser.add_argument('-NCH', '--num_channels', type=int, default=3, help='number of channels')
 parser.add_argument('--lr', type=float, default=0.001, help='learning rate')
 parser.add_argument('-WD', '--weight_decay', type=float, default=0.001, help='l2 reg')
-parser.add_argument('-NL', '--num_layers', type=int, default=2, help='number of GT/FastGT layers')
+parser.add_argument('-NL', '--num_layers', type=int, default=2, help='number of GT layers')
 parser.add_argument('-NGL', '--num_GCN_layers', type=int, default=3, help='number of GCN layers')
 parser.add_argument('--runs', type=int, default=1, help='number of runs')
 parser.add_argument('--folds', type=int, default=10, help='number of folds')
@@ -28,8 +28,8 @@ parser.add_argument("--beta", type=float, default=0, help="beta (Identity matrix
 parser.add_argument('--K', type=int, default=1,
                     help='number of non-local negibors')
 parser.add_argument("--pre_train", action='store_true', help="pre-training FastGT layers")
-parser.add_argument('-NFL', '--num_FastGTN_layers', type=int, default=1,
-                    help='number of FastGTN layers')
+parser.add_argument('-NGTNL', '--num_GTN_layers', type=int, default=1,
+                    help='number of GTN layers')
 parser.add_argument('-POD', '--preprocess_output_dim', type=int, default=64,
                     help='Output dimension for the preprocess NN')
 parser.add_argument('-NCL', '--num_classes', type=int, default=2,
